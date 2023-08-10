@@ -27,7 +27,10 @@ export default class StupidResponseHandler {
     try {
       res.send(this.success(res, data))
     } catch (error) {
-      res.send(this.error(res, "fuck you error"))
+      res.send(this.error(res, {
+        message: "error bozo",
+        stacktrace: JSON.stringify(error),
+      }))
     } finally {
       console.log(`\n[${currDateTimeStr}] Response Sent to ${req.ip.split(":")[3]}\n${JSON.stringify(data)}\n`)
     }

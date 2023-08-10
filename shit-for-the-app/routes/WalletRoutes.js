@@ -1,12 +1,19 @@
 import express from 'express';
-import WalletController from '../controllers/wallet/WalletController.js';
+import StupidResponseHandler from "../utils/StupidResponseHandler.js";
+import WalletController from '../controllers/WalletController.js';
 
-const router = express.Router();
-const walletController = new WalletController()
+const walletRoutes = express.Router();
+const stupidResponseHandler = new StupidResponseHandler();
+const walletController = new WalletController();
 
-router.get('/wallet/:id', walletController.getWallet);
-// router.post('/wallet', WalletController.createUser);
-// router.put('/wallet/:id', WalletController.updateUser);
-// router.delete('/wallet/:id', WalletController.deleteUser);
+// Add some middleware functions to the router
+walletRoutes.use((req, res, next) => { next(); });
 
-export default router;
+// GET /route1 - its just for testing dumbass
+walletRoutes.get('/route1', (req, res) => {
+  stupidResponseHandler.sendResponseAndLogShitToServer(req, res, {
+    message: "/route1 called, server responded with this data."
+  })
+});
+
+export default walletRoutes;
