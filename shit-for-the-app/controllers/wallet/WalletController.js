@@ -3,7 +3,7 @@ const stupidresponsehandler = new StupidResponseHandler();
 
 export default class WalletController {
   getWallet = (req, res) => {
-    const data = { "data": "shutup" };
+    let data = { "data": "shutup" };
     stupidresponsehandler.sendResponseAndLogShitToServer(req, res, data);
   }
 

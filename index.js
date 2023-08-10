@@ -17,7 +17,7 @@ const arweave = Arweave.init({
 });
 
 app.get('/', (req, res) => {
-  let data = { "data": "blockweave-arweave-sdk-experiment" }
+  let data = { title: "blockweave-arweave-sdk-experiment" }
   stupidResponseHandler.sendResponseAndLogShitToServer(req, res, data)
 });
 

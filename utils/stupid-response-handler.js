@@ -1,3 +1,5 @@
+let currDateTimeStr = new Date().toString();
+
 export default class StupidResponseHandler {
   constructor() {
     //  shutup
@@ -6,7 +8,8 @@ export default class StupidResponseHandler {
   success(res, data) {
     // Handle successful responses
     res.status(200).json({
-      status: 'success',
+      success: true,
+      timestamp: currDateTimeStr,
       data,
     });
   }
@@ -14,20 +17,19 @@ export default class StupidResponseHandler {
   error(res, message) {
     // Handle error responses
     res.status(400).json({
-      status: 'error',
+      success: false,
+      timestamp: currDateTimeStr,
       message,
     });
   }
 
   sendResponseAndLogShitToServer(req, res, data) {
-    let throwMsg = `${this.sendResponseAndLogShitToServer}'s 'res' passed param value was poorly pass, the garbage passed does not allow .send() to occur`
     try {
-      res.send(data)
+      res.send(this.success(res, data))
     } catch (error) {
-      console.log(error)
-      throw throwMsg
+      res.send(this.error(res, "fuck you error"))
     } finally {
-      console.log(`[${new Date().toString()}] Response Sent to ${req.ip.split(":")[3]}\nwhere data: \n${JSON.stringify(data)}\n`)
+      console.log(`\n[${currDateTimeStr}] Response Sent to ${req.ip.split(":")[3]}\n${JSON.stringify(data)}\n`)
     }
   }
 
