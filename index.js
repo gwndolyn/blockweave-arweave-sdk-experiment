@@ -5,7 +5,7 @@ import walletRoutes from './shit-for-the-app/routes/WalletRoutes.js';
 const app = express();
 const stupidResponseHandler = new StupidResponseHandler();
 
-app.use('/api', walletRoutes);
+app.use('/wallet', walletRoutes);
 
 app.get('/', (req, res) => {
   stupidResponseHandler.sendResponseAndLogShitToServer(req, res, {
