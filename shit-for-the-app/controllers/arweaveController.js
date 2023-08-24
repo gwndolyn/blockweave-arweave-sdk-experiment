@@ -29,7 +29,7 @@ export default class ArweaveController {
   async getWalletBalance(walletAddress) {
     // all balance will be showned in AR, i don't care about winston
     let [winston, ar] = ""
-    const balance = await arweave.wallets.getBalance(walletAddress).then((balance) => {
+    await arweave.wallets.getBalance(walletAddress).then((balance) => {
       winston = balance
       ar = arweave.ar.arToWinston(balance)
     })
@@ -40,6 +40,10 @@ export default class ArweaveController {
         inAr: ar
       }
     }
+  }
+
+  async mintBalance(walletAddress, arBalance) {
+    // TODO - please make mint tmrw
   }
 
   // [TRANSACTIONS]
