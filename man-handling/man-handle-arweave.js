@@ -4,16 +4,13 @@ import Arweave from "arweave";
 global.Headers = fetch.Headers;
 global.fetch = fetch;
 
-export default class ManHandle {
-  constructor() { }
-}
-
 const arweave = Arweave.init({
   host: "127.0.0.1", // localhost:1984
   port: 1984,
   protocol: "http",
   logging: true
 });
+
 
 // generate wallet Json Web Key
 let walletJWK;

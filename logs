@@ -1,6 +1,7 @@
-[24/08/2023, 2:49:32 pm] GET /wallet/-XIcwrvYodc1texg0GAxXIkMFVHu6ogpcdpsOXLLQB4/balance 200 34ms 
-[24/08/2023, 2:49:32 pm] GET /tx_anchor 200 5ms 
-[24/08/2023, 2:49:32 pm] GET /price/63 200 2ms 
-[24/08/2023, 2:49:32 pm] POST /tx 410 42ms 
-[24/08/2023, 2:49:32 pm] GET /wallet/-XIcwrvYodc1texg0GAxXIkMFVHu6ogpcdpsOXLLQB4/last_tx 204 4ms 
-[24/08/2023, 2:49:51 pm] GET /mint 200 2ms 
+[24/08/2023, 3:52:53 pm] GET / 200 28ms 
+[24/08/2023, 4:49:14 pm] GET /12585 200 5ms 
+[24/08/2023, 5:54:58 pm] GET /wallet/x1_gEQdn-U06jOPkEIPhySu7wno0ij7xGcUBgUiDLwE/balance 200 19ms 
+[24/08/2023, 6:02:15 pm] GET /wallet/x1_gEQdn-U06jOPkEIPhySu7wno0ij7xGcUBgUiDLwE/balance 200 3ms 
+[24/08/2023, 6:02:16 pm] GET /wallet/x1_gEQdn-U06jOPkEIPhySu7wno0ij7xGcUBgUiDLwE/balance 200 3ms 
+[24/08/2023, 6:02:17 pm] GET /wallet/x1_gEQdn-U06jOPkEIPhySu7wno0ij7xGcUBgUiDLwE/balance 200 3ms 
+[24/08/2023, 6:11:26 pm] GET /wallet/tAijad4Ju-s5DJGY8_vZY8SPICwYQn410bveeJNGmvw/balance 200 4ms 
