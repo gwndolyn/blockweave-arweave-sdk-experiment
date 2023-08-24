@@ -1,0 +1,6 @@
+[24/08/2023, 2:49:32 pm] GET /wallet/-XIcwrvYodc1texg0GAxXIkMFVHu6ogpcdpsOXLLQB4/balance 200 34ms 
+[24/08/2023, 2:49:32 pm] GET /tx_anchor 200 5ms 
+[24/08/2023, 2:49:32 pm] GET /price/63 200 2ms 
+[24/08/2023, 2:49:32 pm] POST /tx 410 42ms 
+[24/08/2023, 2:49:32 pm] GET /wallet/-XIcwrvYodc1texg0GAxXIkMFVHu6ogpcdpsOXLLQB4/last_tx 204 4ms 
+[24/08/2023, 2:49:51 pm] GET /mint 200 2ms 
