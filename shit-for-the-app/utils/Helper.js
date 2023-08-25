@@ -1,7 +1,6 @@
-import fs from "fs"
+import fs from "fs";
 
 class Helper {
-
   // dumpAndLogJson(data) {
   //   if (typeof data !== 'object' || Array.isArray(data)) {
   //     throw new Error('Data is not a valid JSON object');
@@ -16,6 +15,11 @@ class Helper {
   //   }
   // }
 
+  constructor() {}
+
+  customLogger(tag, logMessage) {
+    console.log(`\n[${tag}]\n${logMessage}`);
+  }
 }
 
 export default Helper;
