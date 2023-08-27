@@ -32,7 +32,13 @@ export default class StupidResponseHandler {
         stacktrace: JSON.stringify(error),
       }))
     } finally {
-      console.log(`\n[${currDateTimeStr}] Response Sent to ${req.ip.split(":")[3]}\n${JSON.stringify(data)}\n`)
+      console.log(`\n[${currDateTimeStr}] Response Sent to ${()=>{
+        try {
+          return req.ip.split(":")[3]
+        } catch (error) {
+          return error
+        }
+      }}\n${JSON.stringify(data)}\n`)
     }
   }
 
