@@ -19,6 +19,9 @@
   },
   "homepage": "https://github.com/leicester70/blockweave-arweave-sdk-experiment#readme",
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/joy": "^5.0.0-beta.3",
     "arlocal": "^1.1.61",
     "arweave": "^1.14.4",
     "express": "^4.18.2"
